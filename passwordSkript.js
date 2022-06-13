@@ -15,12 +15,12 @@ firstPassword.addEventListener("change", startCheck);
 function startCheck() {
   checkLength();
   checkNumber();
+  checkUpperCase();
+  checkLowerCase();
 
   //must be last
   checkEqual();
   //must be last
-
-  console.log("yes");
 }
 
 function checkEqual() {
@@ -30,6 +30,7 @@ function checkEqual() {
     answerEqual.innerHTML = "no";
     answerTenCharacters.innerHTML = "no";
     answerUpperCase.innerHTML = "no";
+    answerLowerCase.innerHTML = "no";
     answerContainsNumbers.innerHTML = "no";
   }
 }
@@ -49,6 +50,7 @@ function checkNumber() {
     if (isNaN(firstPassword.value[i])) {
     } else {
       checknumber++;
+      console.log(checknumber);
     }
   }
   if (checknumber === 0) {
@@ -58,6 +60,41 @@ function checkNumber() {
   }
 }
 
+function checkUpperCase() {
+  let numberCase = 0;
+
+  for (let i = 0; i < firstPassword.value.length; i++) {
+    if (
+      firstPassword.value[i] === firstPassword.value[i].toUpperCase() &&
+      isNaN(firstPassword.value[i])
+    )
+      numberCase++;
+  }
+  if (numberCase > 0) {
+    answerUpperCase.innerHTML = "yes";
+  } else {
+    answerUpperCase.innerHTML = "no";
+  }
+}
+
+function checkLowerCase() {
+  let numberCase = 0;
+
+  for (let i = 0; i < firstPassword.value.length; i++) {
+    if (
+      firstPassword.value[i] === firstPassword.value[i].toLowerCase() &&
+      isNaN(firstPassword.value[i])
+    )
+      numberCase++;
+  }
+  if (numberCase > 0) {
+    answerLowerCase.innerHTML = "yes";
+  } else {
+    answerLowerCase.innerHTML = "no";
+  }
+}
+
+// ab hier Button Change
 changeButton.addEventListener("click", changeHidden);
 
 function changeHidden() {

@@ -1,3 +1,12 @@
-#helloWorld {
-  color: red;
+body {
+  background-color: salmon;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+}
+
+.inputPassword {
+  margin-bottom: 1em;
 }
