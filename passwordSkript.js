@@ -25,21 +25,21 @@ function startCheck() {
 
 function checkEqual() {
   if (firstPassword.value === secondPassword.value) {
-    answerEqual.innerHTML = "yes";
+    answerEqual.textcontent = "yes";
   } else {
-    answerEqual.innerHTML = "no";
-    answerTenCharacters.innerHTML = "no";
-    answerUpperCase.innerHTML = "no";
-    answerLowerCase.innerHTML = "no";
-    answerContainsNumbers.innerHTML = "no";
+    answerEqual.textcontent = "no";
+    answerTenCharacters.textcontent = "no";
+    answerUpperCase.textcontent = "no";
+    answerLowerCase.textcontent = "no";
+    answerContainsNumbers.textcontent = "no";
   }
 }
 
 function checkLength() {
   if (firstPassword.value.length >= 10) {
-    answerTenCharacters.innerHTML = "yes";
+    answerTenCharacters.textcontent = "yes";
   } else {
-    answerTenCharacters.innerHTML = "no";
+    answerTenCharacters.textcontent = "no";
   }
 }
 
@@ -54,9 +54,9 @@ function checkNumber() {
     }
   }
   if (checknumber === 0) {
-    answerContainsNumbers.innerHTML = "no";
+    answerContainsNumbers.textcontent = "no";
   } else {
-    answerContainsNumbers.innerHTML = "yes";
+    answerContainsNumbers.textcontent = "yes";
   }
 }
 
@@ -71,9 +71,9 @@ function checkUpperCase() {
       numberCase++;
   }
   if (numberCase > 0) {
-    answerUpperCase.innerHTML = "yes";
+    answerUpperCase.textContent = "😍";
   } else {
-    answerUpperCase.innerHTML = "no";
+    answerUpperCase.textcontent = "no";
   }
 }
 
@@ -88,9 +88,9 @@ function checkLowerCase() {
       numberCase++;
   }
   if (numberCase > 0) {
-    answerLowerCase.innerHTML = "yes";
+    answerLowerCase.textcontent = "yes";
   } else {
-    answerLowerCase.innerHTML = "no";
+    answerLowerCase.textcontent = "no";
   }
 }
 
