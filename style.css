@@ -1,0 +1,43 @@
+body {
+  background-color: salmon;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+}
+
+.inputPassword {
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-family: "Lobster", "Arial";
+}
+
+p {
+  font-family: "Open Sans", "Arial";
+}
+
+input {
+  border: black solid 0.5px;
+  border-radius: 5px;
+  /*2px sieht man ja garnicht*/
+}
+
+@media screen and (min-width: 7000px) {
+  h1 {
+    color: red;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /* WIP */
+  }
+}
+
+h1 {
+  text-align: center;
+}
